@@ -17,12 +17,14 @@ if [[ "$choice" = "y" ]]; then
     if [[ -f "$ZSH" ]]; then
         read -p "$(echo -e "${RED}.zshrc already exists at '$ZSH'.${NC} Do you want to overwrite it (y/n)? ")" choice
         if [[ "$choice" = "y" ]]; then
-            echo -e "${GREEN}.zshrc has been copied to '$ZSH'.${NC}"
+            ln -sf ./zshrc ~/.zshrc
+            echo -e "${GREEN}.zshrc has been symlinked to '$ZSH'.${NC}"
         else
             echo "Skipping .zshrc."
         fi
     else
-        echo "${GREEN}.zshrc has been copied to '$ZSH'.${NC}"
+        ln -sf ./zshrc ~/.zshrc
+        echo "${GREEN}.zshrc has been symlinked to '$ZSH'.${NC}"
     fi
     echo -e "\n"
     echo "Rollout complete."
