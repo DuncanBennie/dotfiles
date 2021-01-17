@@ -24,4 +24,5 @@ antigen bundle marlonrichert/zsh-autocomplete
 antigen apply
 
 alias sudo='sudo '
+alias beetimport='docker exec -u abc -it beets /bin/bash -c "beet import /downloads"'
 alias dc='docker-compose'
