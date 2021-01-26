@@ -7,13 +7,13 @@ echo "Copying .zshrc to '$ZSH'."
 if [[ -f "$ZSH" ]]; then
     read -p "$(echo -e ".zshrc already exists at '$ZSH'. Do you want to overwrite it (y/n)? ")" choice
     if [[ "$choice" = "y" ]]; then
-        ln -sf ./.zshrc ~/.zshrc
+        ln -sf ./.zshrc $ZSH
         echo -e ".zshrc has been symlinked to '$ZSH'."
     else
         echo "Skipping .zshrc."
     fi
 else
-    ln -sf ./.zshrc ~/.zshrc
+    ln -sf ./.zshrc $ZSH
     echo ".zshrc has been symlinked to '$ZSH'."
 fi
 }
