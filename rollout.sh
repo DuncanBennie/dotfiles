@@ -22,7 +22,6 @@ read -p "This script will overwrite your pre-existing files. Do you want to cont
 if [[ "$choice" = "y" ]]; then
     echo "Rolling out dotfiles..."
     zshrc
-    source ~/.zshrc
     echo "Rollout complete."
 else
     echo "Exiting...";
