@@ -16,13 +16,13 @@ else
     ln -sf ~/.dotfiles/.zshrc $ZSH
     echo ".zshrc has been symlinked to '$ZSH'."
 fi
-source ~/.zshrc
 }
 
 read -p "This script will overwrite your pre-existing files. Do you want to continue (y/n)? " choice
 if [[ "$choice" = "y" ]]; then
     echo "Rolling out dotfiles..."
     zshrc
+    source ~/.zshrc
     echo "Rollout complete."
 else
     echo "Exiting...";
