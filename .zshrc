@@ -19,7 +19,6 @@ esac
 # ANTIGEN PLUGINS
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle marlonrichert/zsh-autocomplete
 antigen apply
 
 # ALIASES
