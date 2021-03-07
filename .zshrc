@@ -24,3 +24,4 @@ antigen apply
 # ALIASES
 alias sudo='sudo '
 alias dc='docker-compose'
+alias ytdl='youtube-dl'
